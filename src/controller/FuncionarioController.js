@@ -1,4 +1,4 @@
-import {createFuncionario, getFuncionarioById, getFuncionarios, deleteFuncionario, updateFuncionario} from '../model/funcionario.js'
+import {createFuncionario, getFuncionarioById, getFuncionarios, deleteFuncionario, updateFuncionario} from '../models/funcionario.js'
 
 export const cadastrarFuncionario = async (req, res) => {
     try {

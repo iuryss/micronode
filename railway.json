@@ -1,0 +1,11 @@
+{
+    "build": {
+    "builder": "NIXPACKS",
+    "nixpacks": {
+        "phases": {
+        "install": "npm install ",
+        "start": "npm start"
+        }
+    }
+    }
+} 

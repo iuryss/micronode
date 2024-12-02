@@ -30,3 +30,8 @@ export const deleteFuncionario = async (id) => {
     const [result] = await pool.query('DELETE FROM funcionario WHERE id = ?', [id]);
     return result;
 };
+
+export const getProfessores = async() => {
+    const[result] = await pool.query("SELECT * FROM funcionario WHERE profissao = ?", ["PROFESSOR"]);
+    return result;
+}

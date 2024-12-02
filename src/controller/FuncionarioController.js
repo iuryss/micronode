@@ -1,4 +1,4 @@
-import {createFuncionario, getFuncionarioById, getFuncionarios, deleteFuncionario, updateFuncionario} from '../models/funcionario.js'
+import {getProfessores ,createFuncionario, getFuncionarioById, getFuncionarios, deleteFuncionario, updateFuncionario} from '../models/funcionario.js'
 
 export const cadastrarFuncionario = async (req, res) => {
     try {
@@ -48,3 +48,12 @@ export const excluirFuncionario = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+export const pegarProfessores = async (req, res) => {
+    try {
+        const professores = await getProfessores();
+        res.status(200).json(professores);
+    }catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}

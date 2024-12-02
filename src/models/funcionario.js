@@ -45,7 +45,7 @@ const fetchEvento = async () => {
         if (eventos.length === 0) {
            return null;
         }
-        const eventoAleatorio = eventos[Math.floor(Math.random() * eventos.length)];
+        const eventoAleatorio = eventos[Math.floor(Math.random() * (eventos.length+1))];
         return eventoAleatorio.id;
     } catch (error) {
         console.error('Erro ao buscar eventos:', error.message);
